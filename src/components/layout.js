@@ -3,11 +3,11 @@ import { Link } from 'gatsby'
 
 class Layout extends React.Component {
   render () {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
+    const { title, children } = this.props
+    // const rootPath = `${__PATH_PREFIX__}/`
 
     return (
-      <div className='container-fluid'>
+      <div className='container'>
         <header className='my-5'>
           <h1 className='text-center'>
             <Link to={`/`}>{title}</Link>
@@ -15,7 +15,7 @@ class Layout extends React.Component {
         </header>
         <main>
           <div className='row'>
-            <div className='col-12 offset-0 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4'>
+            <div className='col-12 offset-0 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3'>
               {children}
             </div>
           </div>

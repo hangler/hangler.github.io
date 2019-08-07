@@ -6,6 +6,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 import '../scss/bootstrap/bootstrap.scss'
+import '../../content/assets/fonts/fonts.css'
+import '../scss/app.scss'
 
 class BlogIndex extends React.Component {
   render () {
