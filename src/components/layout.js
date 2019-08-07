@@ -9,8 +9,10 @@ class Layout extends React.Component {
     return (
       <div className='container'>
         <header className='my-5'>
-          <h1 className='text-center'>
-            <Link to={`/`}>{title}</Link>
+          <h1 className='text-center font-italic'>
+            <Link to={`/`} className='text-dark'>
+              {title}
+            </Link>
           </h1>
         </header>
         <main>
@@ -21,9 +23,7 @@ class Layout extends React.Component {
           </div>
         </main>
         <footer className='text-center text-muted'>
-          <hr />© {new Date().getFullYear()}. Built with
-          {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>.
+          <small>© {new Date().getFullYear()}</small>
         </footer>
       </div>
     )
