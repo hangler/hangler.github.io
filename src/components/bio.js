@@ -9,8 +9,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 
-import { rhythm } from '../utils/typography'
-
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -34,11 +32,7 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        marginBottom: rhythm(2.5)
-      }}
-    >
+    <div>
       <div style={{ width: '300px', margin: '1rem auto' }}>
         <Image
           fixed={data.avatar.childImageSharp.fixed}
@@ -83,8 +77,8 @@ const Bio = () => {
       </p>
       <p>
         You can follow me on Twitter at{' '}
-        <a href='https://twitter.com/hangler'>@hangler</a>, though I don't post
-        very much anymore.
+        <a href={`https://twitter.com/${social.twitter}`}>@hangler</a>, though I
+        don't post very much anymore.
       </p>
       <hr />
       <h2>Colophon</h2>
