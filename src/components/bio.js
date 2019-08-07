@@ -39,17 +39,17 @@ const Bio = () => {
         marginBottom: rhythm(2.5)
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: '1rem',
-          minWidth: '300px',
-          marginLeft: 'auto',
-          marginRight: 'auto'
-        }}
-      />
+      <div style={{ width: '300px', margin: '1rem auto' }}>
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author}
+          style={{
+            width: `300px`,
+            border: 'solid 1px black',
+            boxShadow: '0px 5px 10px #999'
+          }}
+        />
+      </div>
       <p>
         Hi. I’m Frank Hangler, a data designer and developer living in
         Vancouver, Canada.
