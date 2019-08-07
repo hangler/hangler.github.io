@@ -65,7 +65,7 @@
     font-style: normal
 }
 
-/* @font-face {
+@font-face {
     font-family: 'equity';
     src: url("equity/equity-text-a-tab-bold-webfont.woff") format("woff");
     font-weight: bold;
@@ -84,4 +84,4 @@
     src: url("equity/equity-text-a-tab-bolditalic-webfont.woff") format("woff");
     font-weight: bold;
     font-style: italic
-} */
+}
