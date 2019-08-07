@@ -1,68 +1,27 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { auto } from 'eol'
-
 class Layout extends React.Component {
   render () {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    let header
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            marginTop: 0,
-            marginLeft: auto,
-            marginRight: auto,
-            textAlign: 'center'
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}. Built with
+      <div className='container-fluid'>
+        <header className='my-5'>
+          <h1 className='text-center'>
+            <Link to={`/`}>{title}</Link>
+          </h1>
+        </header>
+        <main>
+          <div className='row'>
+            <div className='col-12 offset-0 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4'>
+              {children}
+            </div>
+          </div>
+        </main>
+        <footer className='text-center text-muted'>
+          <hr />© {new Date().getFullYear()}. Built with
           {` `}
           <a href='https://www.gatsbyjs.org'>Gatsby</a>.
         </footer>

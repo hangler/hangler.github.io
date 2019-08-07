@@ -14,7 +14,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic-3.jpg/" }) {
         childImageSharp {
-          fixed(width: 300, height: 300) {
+          fixed(width: 250, height: 250) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -33,14 +33,13 @@ const Bio = () => {
   const { author, social } = data.site.siteMetadata
   return (
     <div>
-      <div style={{ width: '300px', margin: '1rem auto' }}>
+      <div className='mx-auto mb-5' style={{ width: '250px' }}>
         <Image
           fixed={data.avatar.childImageSharp.fixed}
           alt={author}
           style={{
-            width: `300px`,
-            border: 'solid 1px black',
-            boxShadow: '0px 5px 10px #999'
+            width: `250px`,
+            border: 'solid 1px black'
           }}
         />
       </div>
@@ -69,7 +68,7 @@ const Bio = () => {
         member of a development team working with new technologies. Most of my
         projects were tools to improve internal collaboration.
       </p>
-      <hr />
+      <hr className='my-4' />
       <h2>Contact</h2>
       <p>
         Feel free to email me at{' '}
@@ -80,7 +79,7 @@ const Bio = () => {
         <a href={`https://twitter.com/${social.twitter}`}>@hangler</a>, though I
         don't post very much anymore.
       </p>
-      <hr />
+      <hr className='my-4' />
       <h2>Colophon</h2>
       <p>The typeface used on this site is Equity by Matthew Butterick.</p>
       <p>
