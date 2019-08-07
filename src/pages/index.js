@@ -5,6 +5,8 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+import '../scss/bootstrap/bootstrap.scss'
+
 class BlogIndex extends React.Component {
   render () {
     const { data } = this.props
