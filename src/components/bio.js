@@ -88,10 +88,7 @@ const Bio = () => {
       </p>
       <hr />
       <h2>Colophon</h2>
-      <p>
-        The sans and serif fonts used on this site are, respectively, Concourse
-        and Equity, both by Matthew Butterick.
-      </p>
+      <p>The typeface used on this site is Equity by Matthew Butterick.</p>
       <p>
         The title is not a misspelling, but a{' '}
         <a href='http://en.wikipedia.org/wiki/Izaak_Walton#The_Compleat_Angler'>
@@ -100,7 +97,6 @@ const Bio = () => {
         . (Even though I’ve only gone fishing once, and didn’t catch anything,
         the pun was too good to pass up.)
       </p>
-      <hr />
     </div>
   )
 }
