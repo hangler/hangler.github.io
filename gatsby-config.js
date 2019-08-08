@@ -1,10 +1,10 @@
 module.exports = {
-  pathPrefix: '/hangler.net',
+  pathPrefix: '',
   siteMetadata: {
     title: `The Compleat Hangler`,
     author: `Frank Hangler`,
     description: `Personal website of Frank Hangler, data designer and developer.`,
-    siteUrl: `https://hangler.net`,
+    siteUrl: `https://hangler.github.io`,
     social: {
       twitter: `hangler`
     }
