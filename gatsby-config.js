@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/hangler.net',
   siteMetadata: {
     title: `The Compleat Hangler`,
     author: `Frank Hangler`,
